@@ -1,0 +1,22 @@
+<div class="app-container">
+  <app-workers-list (selectWorker)="onWorkerSelected($event)" />
+
+  @if (selectedWorkerId(); as workerId) {
+  <div class="dashboard">
+    <app-flights-table
+      [workerId]="workerId"
+      (flightSelected)="onFlightSelected($event)"
+    />
+
+    <app-flight-info [flight]="selectedFlight()" />
+  </div>
+}
+@else {
+  <div class="placeholder">
+    <h2>Select a worker to view their flights</h2>
+    <p>Start by choosing a crew member from the list on the left.</p>
+    <img src="/placeHolder.jpg" alt="Select a worker" />
+  </div>
+}
+
+</div>

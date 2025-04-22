@@ -1,0 +1,11 @@
+<div class="workers-container">
+    <h2 class="section-title">Workers</h2>
+    <ul>
+      @for (worker of workers(); track worker) {
+        <li (click)="onWorkerClick(worker.id)">
+          {{ worker.name }}
+        </li>
+      }
+    </ul>
+  </div>
+  

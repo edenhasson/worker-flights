@@ -1,0 +1,75 @@
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;    
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;   
+  }
+  
+  .table-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .styled-table {
+    width: 100%;
+    min-width: 600px;     
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  
+  .styled-table thead {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.85rem, 1vw + 0.2rem, 1rem);
+  }
+  
+  /* Row hover & focus */
+  .styled-table tbody tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .styled-table tbody tr:hover {
+    background-color: #f0f8ff;
+  }
+
+  .styled-table tbody tr.selected {
+    background-color: #e6f7ff; /* light blue */
+    font-weight: 500;
+  }
+  
+  
+  @media (max-width: 768px) {
+    /* Stack table headers as labels on each cell */
+    .styled-table,
+    .styled-table thead {
+      display: block;
+    }
+    .styled-table thead tr {
+      display: none;
+    }
+    .styled-table tbody tr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .styled-table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+    }
+  }
+  

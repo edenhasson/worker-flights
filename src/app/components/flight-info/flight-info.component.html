@@ -1,0 +1,37 @@
+@if (flight()) {
+    <div class="flight-info">
+      <h2 class="flight-title">Flight Details</h2>
+      
+      <div class="info-grid">
+        <div class="info-card">
+          <span class="label">Flight Number</span>
+          <div class="value">{{ flight()?.num }}</div>
+        </div>
+        <div class="info-card">
+          <span class="label">Plane</span>
+          <div class="value">{{ flight()?.plane }}</div>
+        </div>
+        <div class="info-card">
+          <span class="label">Duration</span>
+          <div class="value">{{ flight()?.duration! | flightDuration }}</div>
+        </div>
+        <div class="info-card">
+          <span class="label">From</span>
+          <div class="value">{{ flight()?.from }} (Gate {{ flight()?.from_gate }})</div>
+        </div>
+        <div class="info-card">
+          <span class="label">To</span>
+          <div class="value">{{ flight()?.to }} (Gate {{ flight()?.to_gate }})</div>
+        </div>
+        <div class="info-card full">
+          <span class="label">Departure Date</span>
+          <div class="value">{{ flight()?.from_date }}</div>
+        </div>
+        <div class="info-card full">
+          <span class="label">Arrival Date</span>
+          <div class="value">{{ flight()?.to_date }}</div>
+        </div>
+      </div>
+    </div>
+  }
+  

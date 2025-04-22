@@ -1,0 +1,87 @@
+.app-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+  }
+  
+  app-workers-list {
+    flex: 0 0 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .dashboard {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+  }
+  
+  app-flights-table {
+    flex: 2;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  app-flight-info {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    animation: fadeIn 0.4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .placeholder h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .placeholder p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .placeholder img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    opacity: 0.9;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  
+  
+  
